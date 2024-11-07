@@ -10,5 +10,8 @@ Pod::Spec.new do |s|
   s.static_framework      = true
   s.requires_arc          = true
 
-  # 待开发
+  s.default_subspec = 'Core'
+  s.subspec 'Core' do |ss|
+    ss.source_files = 'Sources/*.{swift,h,m}'
+  end
 end
