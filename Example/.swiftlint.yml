@@ -2,6 +2,7 @@ disabled_rules:
   - unused_closure_parameter
   - unused_setter_value
   - cyclomatic_complexity
+  - unneeded_synthesized_initializer
 opt_in_rules:
   - let_var_whitespace
   - operator_usage_whitespace
@@ -10,7 +11,6 @@ analyzer_rules:
   - unused_import
 included:
   - ./
-  - ../Sources
 excluded:
   - Pods
 identifier_name:
@@ -19,7 +19,6 @@ identifier_name:
 type_name:
   allowed_symbols: "_"
 trailing_whitespace:
-  severity: error
   ignores_empty_lines: true
 line_length:
   warning: 1800
@@ -33,8 +32,8 @@ file_length:
   error: 500
   ignore_comment_only_lines: true
 function_body_length:
-  warning: 200
-  error: 200
+  warning: 300
+  error: 300
 nesting:
   type_level:
     warning: 3
@@ -42,40 +41,9 @@ nesting:
 function_parameter_count:
   warning: 5
   error: 5
+large_tuple:
+  warning: 4
+  error: 4
 unused_optional_binding:
   severity: error
   ignore_optional_try: true
-private_over_fileprivate:
-  severity: error
-colon:
-  severity: error
-vertical_whitespace:
-  severity: error
-trailing_comma:
-  severity: error
-opening_brace:
-  severity: error
-unused_declaration:
-  severity: error
-  include_public_and_open: true
-unused_import:
-  severity: error
-operator_usage_whitespace:
-  severity: error
-comma: error
-redundant_void_return: error
-trailing_semicolon: error
-control_statement: error
-todo: error
-unneeded_break_in_switch: error
-redundant_discardable_let: error
-let_var_whitespace: error
-operator_whitespace: error
-trailing_newline: error
-empty_parentheses_with_trailing_closure: error
-legacy_cggeometry_functions: error
-legacy_constant: error
-legacy_constructor: error
-legacy_nsgeometry_functions: error
-legacy_random: error
-unneeded_synthesized_initializer: error

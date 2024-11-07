@@ -1,13 +1,16 @@
 platform :ios, '13.0'
 use_frameworks! :linkage => :static
 
-source 'https://cdn.cocoapods.org'
+def pod_SuperRefresh
+  pod 'SuperRefresh', :path => '..'
+end
 
 def pod_Debug
-  pod 'SwiftLint', '~> 0.53.0', :configurations => ['Debug']
-  pod 'LookinServer', '~> 1.2.2', :subspecs => ['Swift'], :configurations => ['Debug']
+  pod 'SwiftLint', '~> 0.56.2', :configurations => ['Debug']
+  pod 'LookinServer', '~> 1.2.8', :subspecs => ['Swift'], :configurations => ['Debug']
 end
 
 target 'SuperRefreshExample' do
+  pod_SuperRefresh
   pod_Debug
 end
